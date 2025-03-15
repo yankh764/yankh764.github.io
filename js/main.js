@@ -93,6 +93,17 @@ function updateCopyrightYear() {
     }
 }
 
+function isElementInViewport(el) {
+    if (!el) return false;
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
 // Initialize the page
 document.addEventListener('DOMContentLoaded', async () => {
     updateCopyrightYear();
@@ -100,4 +111,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     setupSmoothScrolling();
     setupIntersectionObserver();
     setupTypewriterEffect();
+
+    setTimeout(() => {
+        if (isElementInViewport(document.getElementById('skills'))) {
+            animateSkillBars();
+        }
+    }, 500);
 });
