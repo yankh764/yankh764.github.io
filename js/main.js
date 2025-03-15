@@ -1,11 +1,14 @@
 function animateSkillBars() {
     const progressBars = document.querySelectorAll('.progress-fill');
     progressBars.forEach(bar => {
-        const width = bar.style.width;
+        bar.dataset.targetWidth = getComputedStyle(bar).width || bar.style.width;
         bar.style.width = '0';
-        setTimeout(() => {
-            bar.style.width = width;
-        }, 100);
+
+        requestAnimationFrame(() => {
+            setTimeout(() => {
+                bar.style.width = bar.dataset.targetWidth;
+            }, 100);
+        });
     });
 }
 
