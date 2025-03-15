@@ -26,10 +26,25 @@
 }
 
 .btn-outline:hover {
-    background-color: var(--secondary);
-    color: white;
+    background-color: rgba(66, 153, 225, 0.1); /* Very light blue background */
+    color: var(--accent); /* Slightly darker blue than the default */
+    border-color: var(--accent);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(66, 153, 225, 0.2);
+    box-shadow: 0 4px 12px rgba(66, 153, 225, 0.15);
+}
+
+.btn-outline-alt {
+    background-color: rgba(45, 55, 72, 0.08); /* Very light primary color fill */
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-outline-alt:hover {
+    background-color: rgba(45, 55, 72, 0.15); /* Slightly darker on hover */
+    border-color: var(--dark);
+    color: var(--dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(45, 55, 72, 0.15);
 }
 
 .skill-tag {
