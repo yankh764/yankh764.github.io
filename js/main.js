@@ -7,7 +7,6 @@ function setupMobileMenu() {
             navLinks.classList.toggle('active');
             menuButton.classList.toggle('active');
 
-            // Toggle hamburger to X animation
             const spans = menuButton.querySelectorAll('span');
             if (spans.length >= 3) {
                 spans[0].style.transform = menuButton.classList.contains('active')
@@ -37,7 +36,6 @@ function setupMobileMenu() {
             });
         });
 
-        // Close mobile menu when clicking outside
         document.addEventListener('click', (event) => {
             if (window.innerWidth <= 768 &&
                 !navLinks.contains(event.target) &&
@@ -47,7 +45,6 @@ function setupMobileMenu() {
                 navLinks.classList.remove('active');
                 menuButton.classList.remove('active');
 
-                // Reset hamburger icon state
                 const spans = menuButton.querySelectorAll('span');
                 if (spans.length >= 3) {
                     spans[0].style.transform = '';
@@ -62,14 +59,15 @@ function setupMobileMenu() {
 function animateSkillBars() {
     const progressBars = document.querySelectorAll('.progress-fill');
     progressBars.forEach(bar => {
+        if (bar.dataset.animated === "true") return;
+
         bar.dataset.targetWidth = getComputedStyle(bar).width || bar.style.width;
         bar.style.width = '0';
 
-        requestAnimationFrame(() => {
-            setTimeout(() => {
-                bar.style.width = bar.dataset.targetWidth;
-            }, 100);
-        });
+        setTimeout(() => {
+            bar.style.width = bar.dataset.targetWidth;
+            bar.dataset.animated = "true";
+        }, 1000);
     });
 }
 
@@ -119,18 +117,19 @@ function setupIntersectionObserver() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Add fade-in animation to visible sections
-                entry.target.classList.add('fade-in');
+                if (!entry.target.classList.contains('has-animated')) {
+                    entry.target.classList.add('fade-in');
+                    entry.target.classList.add('has-animated');
 
-                // Special handling for skills section
-                if (entry.target.id === 'skills') {
-                    animateSkillBars();
+                    if (entry.target.id === 'skills' && !entry.target.dataset.animated) {
+                        animateSkillBars();
+                        entry.target.dataset.animated = "true";
+                    }
                 }
             }
         });
     }, observerOptions);
 
-    // Observe all sections for animation
     document.querySelectorAll('section').forEach(section => {
         observer.observe(section);
     });
@@ -154,18 +153,6 @@ function updateCopyrightYear() {
     }
 }
 
-function isElementInViewport(el) {
-    if (!el) return false;
-    const rect = el.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
-
-// Initialize the page
 document.addEventListener('DOMContentLoaded', async () => {
     updateCopyrightYear();
     setupScrollToTop();
