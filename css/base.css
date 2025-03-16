@@ -20,6 +20,8 @@ html {
 }
 
 body {
+    overflow-x: hidden;
+    width: 100%;
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: var(--text);
@@ -56,4 +58,38 @@ h2::after {
     height: 4px;
     background-color: var(--secondary);
     border-radius: 4px;
+}
+
+@media (max-width: 992px) {
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
 }

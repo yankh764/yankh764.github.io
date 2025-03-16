@@ -1,3 +1,22 @@
+function setupMobileMenu() {
+    const menuButton = document.querySelector('.mobile-menu-button');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (menuButton && navLinks) {
+        menuButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuButton.classList.toggle('active');
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuButton.classList.remove('active');
+            });
+        });
+    }
+}
+
 function animateSkillBars() {
     const progressBars = document.querySelectorAll('.progress-fill');
     progressBars.forEach(bar => {
@@ -111,6 +130,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     setupSmoothScrolling();
     setupIntersectionObserver();
     setupTypewriterEffect();
+    setupMobileMenu();
 
     setTimeout(() => {
         if (isElementInViewport(document.getElementById('skills'))) {

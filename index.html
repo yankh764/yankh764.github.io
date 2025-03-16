@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Jan Khoury - Backend Software Engineer specializing in Python, FastAPI, and cloud technologies">
   <meta name="keywords" content="backend engineer, software developer, Python, FastAPI, GCP">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta property="og:title" content="Jan Khoury | Backend Software Engineer">
   <meta property="og:description" content="Backend Software Engineer specializing in Python, FastAPI, and cloud technologies">
   <meta property="og:image" content="https://yankh764.github.io/images/profile.jpg">
@@ -25,6 +26,11 @@
   <div class="container">
     <nav>
       <div class="logo">Jan<span>Khoury</span></div>
+      <div class="mobile-menu-button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#experience">Experience</a></li>
@@ -62,7 +68,13 @@
         </div>
       </div>
       <div class="hero-image fade-in delay-2">
-        <img src="images/profile.jpg" alt="Jan Khoury" loading="lazy" class="profile-img">
+        <img
+                src="images/profile.jpg"
+                alt="Jan Khoury"
+                loading="lazy"
+                sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px"
+                class="profile-img"
+        >
       </div>
     </div>
 
