@@ -4,6 +4,11 @@
     padding: 0 1.5rem;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 header {
     background-color: white;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -40,6 +45,7 @@ nav {
 }
 
 .nav-links a {
+    min-height: 44px;
     text-decoration: none;
     color: var(--text);
     font-weight: 500;
@@ -97,4 +103,62 @@ section {
 .copyright {
     font-size: 0.95rem;
     opacity: 0.8;
+}
+
+input,
+select,
+textarea,
+button {
+    font-size: 16px;
+}
+
+@media (max-width: 992px) {
+    .container {
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 1rem 0;
+    }
+
+    section {
+        padding: 3rem 0;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .section-description {
+        font-size: 1rem;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0.75rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
 }
