@@ -155,10 +155,8 @@ button {
     .nav-links li {
         margin: 0.75rem 0;
     }
-}
 
-@media (max-width: 480px) {
-    .container {
-        padding: 0 1rem;
+    p, li {
+        line-height: 1.5;
     }
 }

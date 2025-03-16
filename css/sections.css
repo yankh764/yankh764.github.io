@@ -343,24 +343,66 @@
 
     .project-title {
         font-size: 1.2rem;
+        font-weight: 600;
     }
 
     .experience-title {
         font-size: 1.3rem;
+        font-weight: 600;
     }
-}
 
-@media (max-width: 480px) {
+    .bio {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        font-weight: 400;
+    }
+
+    .experience-description {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        font-weight: 400;
+    }
+
+    .experience-description li {
+        margin-bottom: 0.6rem;
+    }
+
+    .project-description {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        font-weight: 400;
+    }
+
     .subtitle {
         font-size: 1.1rem;
     }
 
-    .bio {
-        font-size: 1rem;
+    .experience-company {
+        font-weight: 500;
+        font-size: 0.95rem;
     }
 
-    .profile-img {
-        width: 150px;
-        height: 150px;
+    .education-card p {
+        font-size: 0.95rem;
+    }
+
+    .experience-date,
+    .experience-location {
+        font-size: 0.85rem;
+    }
+
+    .skill-name,
+    .skill-percent {
+        font-size: 0.9rem;
+    }
+
+    .contact-info,
+    .contact-availability {
+        padding: 1.25rem;
+    }
+
+    .project-tag {
+        font-size: 0.75rem;
+        padding: 0.2rem 0.6rem;
     }
 }
