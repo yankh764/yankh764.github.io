@@ -11,7 +11,7 @@ Visit my portfolio at: [yankh764.github.io](https://yankh764.github.io)
 - HTML5
 - CSS3
 - JavaScript
-- Font Awesome for icons
+- Font Awesome and Devicon for icons
 - Google Fonts (Inter, JetBrains Mono)
 
 ## 🔄 Updates
