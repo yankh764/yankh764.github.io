@@ -94,6 +94,12 @@ h2::after {
     border: 2px solid transparent;
 }
 
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
 .btn-primary {
     background-color: var(--secondary);
     color: white;
@@ -150,10 +156,11 @@ h2::after {
 }
 
 .skill-tag:hover {
-    background-color: var(--secondary);
+    background-color: var(--accent);
     color: white;
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(66, 153, 225, 0.2);
+    transition: all 0.3s ease;
 }
 
 .skill-tag i {
@@ -312,6 +319,9 @@ h2::after {
     justify-content: space-between;
     height: 24px;
     cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0.5rem;
 }
 
 .mobile-menu-button span {
@@ -881,6 +891,9 @@ button {
 
     .mobile-menu-button {
         display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 20px;
     }
 
     .nav-links {
@@ -1032,7 +1045,6 @@ button {
     }
 }
 
-/* Fix for mobile menu button JavaScript logic */
 @media screen and (min-width: 769px) {
     .nav-links {
         opacity: 1 !important;
@@ -1043,5 +1055,58 @@ button {
         box-shadow: none;
         width: auto;
         flex-direction: row;
+    }
+}
+
+.site-header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section {
+    padding-top: 120px; /* Adjusted for fixed header */
+}
+
+.skills-progress-container {
+    margin-top: 3rem;
+}
+
+.education-paragraph {
+    margin-bottom: 1rem;
+}
+
+.education-paragraph:last-child {
+    margin-bottom: 0;
+}
+
+.contact-buttons {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeUp 0.6s ease forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fade-in, .delay-1, .delay-2, .delay-3, .delay-4 {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
     }
 }

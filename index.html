@@ -2,37 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Jan Khoury - Backend Software Engineer specializing in Python, FastAPI, and cloud technologies">
-  <meta name="keywords" content="backend engineer, software developer, Python, FastAPI, GCP">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="description" content="Jan Khoury - Backend Software Engineer specializing in Python, FastAPI, cloud technologies, and data integration">
+  <meta name="keywords" content="backend engineer, software developer, Python, FastAPI, GCP, microservices, data integration">
+  <meta name="author" content="Jan Khoury">
   <meta property="og:title" content="Jan Khoury | Backend Software Engineer">
   <meta property="og:description" content="Backend Software Engineer specializing in Python, FastAPI, and cloud technologies">
   <meta property="og:image" content="https://yankh764.github.io/images/profile.jpg">
   <meta property="og:url" content="https://yankh764.github.io/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#4338ca">
 
   <title>Jan Khoury | Backend Software Engineer</title>
 
   <link rel="icon" type="image/png" href="images/logo.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="apple-touch-icon" href="images/logo.png">
+  <link rel="canonical" href="https://yankh764.github.io/">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Preload critical assets -->
+  <link rel="preload" href="images/profile.jpg" as="image">
 </head>
 <body>
-<header>
+<header class="site-header">
   <div class="container">
-    <nav>
-      <div class="logo">Jan<span>Khoury</span></div>
-      <div class="mobile-menu-button">
+    <nav aria-label="Main navigation">
+      <div class="logo" aria-label="Site logo">Jan<span>Khoury</span></div>
+      <button class="mobile-menu-button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
         <span></span>
         <span></span>
         <span></span>
-      </div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" aria-current="page">Home</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -44,530 +52,534 @@
   </div>
 </header>
 
-<section id="home">
-  <div class="container">
-    <div class="hero">
-      <div class="hero-content fade-in">
-        <div class="typewriter">
-          <h1>Hi, I'm <span>Jan Khoury</span></h1>
+<main>
+  <section id="home" class="hero-section">
+    <div class="container">
+      <div class="hero">
+        <div class="hero-content fade-in">
+          <div class="typewriter">
+            <h1>Hi, I'm <span>Jan Khoury</span></h1>
+          </div>
+          <p class="subtitle fade-in delay-1">Backend Software Engineer</p>
+          <p class="bio fade-in delay-2">
+            I'm a data-driven Backend Engineer specializing in building scalable, high-performance microservices and APIs. With expertise in Python, cloud technologies, and data integration, I transform complex data processes into efficient solutions. I'm passionate about building robust systems that help researchers and organizations make better use of their data.
+          </p>
+          <div class="cta-buttons fade-in delay-3">
+            <a href="#contact" class="btn btn-primary">
+              <i class="fas fa-envelope" aria-hidden="true"></i> Contact
+            </a>
+            <a href="#experience" class="btn btn-outline">
+              <i class="fas fa-briefcase" aria-hidden="true"></i> Experience
+            </a>
+            <a href="assets/Jan_Khoury_CV.pdf" class="btn btn-cv" download>
+              <i class="fas fa-download" aria-hidden="true"></i> Resume
+            </a>
+          </div>
         </div>
-        <p class="subtitle fade-in delay-1">Backend Software Engineer</p>
-        <p class="bio fade-in delay-2">
-          I'm a data-driven Backend Engineer specializing in building scalable, high-performance microservices and APIs. With expertise in Python, cloud technologies, and data integration, I transform complex data processes into efficient solutions. I'm passionate about building robust systems that help researchers and organizations make better use of their data.
+        <div class="hero-image fade-in delay-2">
+          <img
+                  src="images/profile.jpg"
+                  alt="Jan Khoury - Backend Software Engineer"
+                  loading="eager"
+                  width="400"
+                  height="400"
+                  sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px"
+                  class="profile-img"
+          >
+        </div>
+      </div>
+
+      <div class="code-box fade-in delay-4" aria-label="Terminal illustration">
+        <div class="code-header">
+          <div class="code-dots">
+            <div class="code-dot red"></div>
+            <div class="code-dot yellow"></div>
+            <div class="code-dot green"></div>
+          </div>
+          <div class="code-title">terminal</div>
+        </div>
+        <div class="code-line">
+          <div class="code-prompt">$</div>
+          <div class="code-command">whoami</div>
+        </div>
+        <div class="code-line">
+          <div class="code-output">Jan Khoury - Backend Software Engineer</div>
+        </div>
+        <div class="code-line">
+          <div class="code-prompt">$</div>
+          <div class="code-command">ls -la skills/</div>
+        </div>
+        <div class="code-line">
+          <div class="code-output">total 42</div>
+        </div>
+        <div class="code-line">
+          <div class="code-output">drwxr-xr-x  <span class="code-highlight">Python</span> <span class="code-highlight">FastAPI</span> <span class="code-highlight">TypeScript</span> <span class="code-highlight">Java</span></div>
+        </div>
+        <div class="code-line">
+          <div class="code-output">drwxr-xr-x  <span class="code-highlight">SQL</span> <span class="code-highlight">Cypher</span> <span class="code-highlight">SPARQL</span> <span class="code-highlight">Docker</span></div>
+        </div>
+        <div class="code-line">
+          <div class="code-output">drwxr-xr-x  <span class="code-highlight">GCP</span> <span class="code-highlight">Terraform</span> <span class="code-highlight">CI/CD</span> <span class="code-highlight">Microservices</span></div>
+        </div>
+        <div class="code-line">
+          <div class="code-prompt">$</div>
+          <div class="code-command">cat experience.txt | grep -i "specialization"</div>
+        </div>
+        <div class="code-line">
+          <div class="code-output">Data integration, microservices, cloud infrastructure, API development</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="experience-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Work Experience</h2>
+        <p class="section-description">
+          My professional journey and contributions in software engineering
         </p>
-        <div class="cta-buttons fade-in delay-3">
-          <a href="#contact" class="btn btn-primary">
-            <i class="fas fa-envelope"></i> Contact
-          </a>
-          <a href="#experience" class="btn btn-outline">
-            <i class="fas fa-briefcase"></i> Experience
-          </a>
-          <a href="assets/Jan_Khoury_CV.pdf" class="btn btn-cv" download>
-            <i class="fas fa-download"></i> Resume
-          </a>
-        </div>
       </div>
-      <div class="hero-image fade-in delay-2">
-        <img
-                src="images/profile.jpg"
-                alt="Jan Khoury"
-                loading="lazy"
-                sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px"
-                class="profile-img"
-        >
-      </div>
-    </div>
 
-    <div class="code-box fade-in delay-4">
-      <div class="code-header">
-        <div class="code-dots">
-          <div class="code-dot red"></div>
-          <div class="code-dot yellow"></div>
-          <div class="code-dot green"></div>
-        </div>
-        <div class="code-title">terminal</div>
-      </div>
-      <div class="code-line">
-        <div class="code-prompt">$</div>
-        <div class="code-command">whoami</div>
-      </div>
-      <div class="code-line">
-        <div class="code-output">Jan Khoury - Backend Software Engineer</div>
-      </div>
-      <div class="code-line">
-        <div class="code-prompt">$</div>
-        <div class="code-command">ls -la skills/</div>
-      </div>
-      <div class="code-line">
-        <div class="code-output">total 42</div>
-      </div>
-      <div class="code-line">
-        <div class="code-output">drwxr-xr-x  <span class="code-highlight">Python</span> <span class="code-highlight">FastAPI</span> <span class="code-highlight">TypeScript</span> <span class="code-highlight">Java</span></div>
-      </div>
-      <div class="code-line">
-        <div class="code-output">drwxr-xr-x  <span class="code-highlight">SQL</span> <span class="code-highlight">Cypher</span> <span class="code-highlight">SPARQL</span> <span class="code-highlight">Docker</span></div>
-      </div>
-      <div class="code-line">
-        <div class="code-output">drwxr-xr-x  <span class="code-highlight">GCP</span> <span class="code-highlight">Terraform</span> <span class="code-highlight">CI/CD</span> <span class="code-highlight">Microservices</span></div>
-      </div>
-      <div class="code-line">
-        <div class="code-prompt">$</div>
-        <div class="code-command">cat experience.txt | grep -i "specialization"</div>
-      </div>
-      <div class="code-line">
-        <div class="code-output">Data integration, microservices, cloud infrastructure, API development</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="experience" style="background-color: #f8fafc;">
-  <div class="container">
-    <div class="section-header">
-      <h2>Work Experience</h2>
-      <p class="section-description">
-        My professional journey and contributions in software engineering
-      </p>
-    </div>
-
-    <div class="experience-grid">
-      <div class="experience-card">
-        <div class="experience-header">
-          <div>
-            <h3 class="experience-title">Backend Software Engineer</h3>
-            <div class="experience-company">Ocean Data Integration Initiative</div>
-            <div class="experience-location">
-              <i class="fas fa-map-marker-alt"></i> Berlin, Germany
+      <div class="experience-grid">
+        <article class="experience-card">
+          <div class="experience-header">
+            <div>
+              <h3 class="experience-title">Backend Software Engineer</h3>
+              <div class="experience-company">Ocean Data Integration Initiative</div>
+              <div class="experience-location">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i> Berlin, Germany
+              </div>
+            </div>
+            <div class="experience-date">
+              <i class="far fa-calendar-alt" aria-hidden="true"></i> Apr 2022 — Present
             </div>
           </div>
-          <div class="experience-date">
-            <i class="far fa-calendar-alt"></i> Apr 2022 — Present
+          <div class="experience-description">
+            <ul>
+              <li>Developed multithreaded microservices for an oceanographic data platform using FastAPI, Pydantic, and Pandas, reducing data processing times and researchers workloads by 40%</li>
+              <li>Implemented REST APIs with Swagger docs and integrated external oceanographic data sources, allowing researchers to access 1M+ datasets through a single interface</li>
+              <li>Decomposed a monolithic system into 4 microservices and owned them end-to-end, separating logic of an oceanographic data integration process while minimizing disruption</li>
+              <li>Provisioned GCP infrastructure consisting of databases, storage buckets, and serverless components using Terraform, and automated deployment with GitLab CI/CD, and Docker</li>
+              <li>Denormalized PostgreSQL database tables and created new JSONB array columns, decreasing query processing times and making data integration jobs 10% faster</li>
+              <li>Converted OWL ontologies into Neo4j graphs and SPARQL queries into Cypher, accelerating nodes retrieval and ontology load times by 90%</li>
+              <li>Replaced custom user authorization and authentication logic with an OAuth2 and OIDC compliant solution using Google Identity Platform and Firebase</li>
+            </ul>
           </div>
-        </div>
-        <div class="experience-description">
-          <ul>
-            <li>Developed multithreaded microservices for an oceanographic data platform using FastAPI, Pydantic, and Pandas, reducing data processing times and researchers workloads by 40%</li>
-            <li>Implemented REST APIs with Swagger docs and integrated external oceanographic data sources, allowing researchers to access 1M+ datasets through a single interface</li>
-            <li>Decomposed a monolithic system into 4 microservices and owned them end-to-end, separating logic of an oceanographic data integration process while minimizing disruption</li>
-            <li>Provisioned GCP infrastructure consisting of databases, storage buckets, and serverless components using Terraform, and automated deployment with GitLab CI/CD, and Docker</li>
-            <li>Denormalized PostgreSQL database tables and created new JSONB array columns, decreasing query processing times and making data integration jobs 10% faster</li>
-            <li>Converted OWL ontologies into Neo4j graphs and SPARQL queries into Cypher, accelerating nodes retrieval and ontology load times by 90%</li>
-            <li>Replaced custom user authorization and authentication logic with an OAuth2 and OIDC compliant solution using Google Identity Platform and Firebase</li>
-          </ul>
-        </div>
+        </article>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="skills">
-  <div class="container">
-    <div class="section-header">
-      <h2>Skills & Expertise</h2>
-      <p class="section-description">
-        The tools and technologies I work with
-      </p>
-    </div>
-
-    <div class="skills-container">
-      <div class="skills-group">
-        <h3>Programming Languages</h3>
-        <div class="skills-list">
-          <div class="skill-tag">
-            <i class="devicon-python-plain"></i> Python
-          </div>
-          <div class="skill-tag">
-            <i class="devicon-typescript-plain"></i> TypeScript
-          </div>
-          <div class="skill-tag">
-            <i class="devicon-java-plain"></i> Java
-          </div>
-        </div>
-      </div>
-
-      <div class="skills-group">
-        <h3>Frameworks & Libraries</h3>
-        <div class="skills-list">
-          <div class="skill-tag">
-            <i class="devicon-fastapi-plain"></i> FastAPI
-          </div>
-          <div class="skill-tag">
-            <i class="devicon-express-original"></i> Express.js
-          </div>
-          <div class="skill-tag">
-            <i class="devicon-react-plain"></i> React
-          </div>
-          <div class="skill-tag">
-            <i class="devicon-nextjs-plain"></i> Next.js
-          </div>
-          <div class="skill-tag">
-            <i class="devicon-pandas-plain"></i> Pandas
-          </div>
-          <div class="skill-tag">
-            <i class="fas fa-check-circle"></i> Pydantic
-          </div>
-        </div>
-      </div>
-
-      <div class="skills-group">
-        <h3>Cloud & Infrastructure</h3>
-        <div class="skills-list">
-          <div class="skill-tag">
-            <i class="fas fa-cloud"></i> Google Cloud Platform
-          </div>
-          <div class="skill-tag">
-            <i class="fas fa-database"></i> BigQuery
-          </div>
-          <div class="skill-tag">
-            <i class="fas fa-database"></i> Cloud SQL
-          </div>
-          <div class="skill-tag">
-            <i class="fas fa-hdd"></i> Cloud Storage
-          </div>
-          <div class="skill-tag">
-            <i class="fas fa-server"></i> Cloud Run
-          </div>
-          <div class="skill-tag">
-            <i class="fas fa-tools"></i> Cloud Build
-          </div>
-          <div class="skill-tag">
-            <i class="devicon-terraform-plain"></i> Terraform
-          </div>
-          <div class="skill-tag">
-            <i class="fab fa-docker"></i> Docker
-          </div>
-          <div class="skill-tag">
-            <i class="devicon-gitlab-plain"></i> GitLab CI/CD
-          </div>
-        </div>
-      </div>
-
-      <div class="skills-group">
-        <h3>Databases & Query Languages</h3>
-        <div class="skills-list">
-          <div class="skill-tag">
-            <i class="devicon-postgresql-plain"></i> PostgreSQL
-          </div>
-          <div class="skill-tag">
-            <i class="fas fa-project-diagram"></i> Neo4j
-          </div>
-          <div class="skill-tag">
-            <i class="devicon-firebase-plain"></i> Firebase
-          </div>
-          <div class="skill-tag">
-            <i class="fas fa-code"></i> SQL
-          </div>
-          <div class="skill-tag">
-            <i class="fas fa-code"></i> Cypher
-          </div>
-          <div class="skill-tag">
-            <i class="fas fa-code"></i> SPARQL
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div style="margin-top: 3rem;">
-      <div class="skill-progress">
-        <div class="skill-header">
-          <div class="skill-name">Backend Development</div>
-          <div class="skill-percent">95%</div>
-        </div>
-        <div class="progress-bar">
-          <div class="progress-fill" style="width: 95%;"></div>
-        </div>
-      </div>
-      <div class="skill-progress">
-        <div class="skill-header">
-          <div class="skill-name">Cloud Infrastructure</div>
-          <div class="skill-percent">90%</div>
-        </div>
-        <div class="progress-bar">
-          <div class="progress-fill" style="width: 90%;"></div>
-        </div>
-      </div>
-      <div class="skill-progress">
-        <div class="skill-header">
-          <div class="skill-name">Database Design & Optimization</div>
-          <div class="skill-percent">85%</div>
-        </div>
-        <div class="progress-bar">
-          <div class="progress-fill" style="width: 85%;"></div>
-        </div>
-      </div>
-      <div class="skill-progress">
-        <div class="skill-header">
-          <div class="skill-name">API Development</div>
-          <div class="skill-percent">95%</div>
-        </div>
-        <div class="progress-bar">
-          <div class="progress-fill" style="width: 95%;"></div>
-        </div>
-      </div>
-      <div class="skill-progress">
-        <div class="skill-header">
-          <div class="skill-name">CI/CD & DevOps</div>
-          <div class="skill-percent">85%</div>
-        </div>
-        <div class="progress-bar">
-          <div class="progress-fill" style="width: 85%;"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="projects" style="background-color: #f8fafc;">
-  <div class="container">
-    <div class="section-header">
-      <h2>Projects</h2>
-      <p class="section-description">
-        A showcase of my technical projects and solutions
-      </p>
-    </div>
-
-    <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-img">
-          <i class="fas fa-car"></i>
-        </div>
-        <div class="project-content">
-          <h3 class="project-title">Teen Driver Monitor</h3>
-          <div class="project-tags">
-            <span class="project-tag">Arduino</span>
-            <span class="project-tag">GPS</span>
-            <span class="project-tag">IoT</span>
-            <span class="project-tag">Hardware</span>
-          </div>
-          <p class="project-description">
-            Built a driver monitoring system using Arduino Nano, which detects driving speed with a NEO-6M GPS module, measures alcohol levels with an MQ-3 gas sensor, reports results to guardians via SMS using a GSM SIM900A module, and displays them in real time on an LCD screen.
-          </p>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-img">
-          <i class="fas fa-water"></i>
-        </div>
-        <div class="project-content">
-          <h3 class="project-title">Oceanographic Data Integration Platform</h3>
-          <div class="project-tags">
-            <span class="project-tag">Python</span>
-            <span class="project-tag">FastAPI</span>
-            <span class="project-tag">GCP</span>
-            <span class="project-tag">Microservices</span>
-          </div>
-          <p class="project-description">
-            Took part in engineering a platform that integrates, processes, and delivers oceanographic data from multiple sources, enabling researchers to access and analyze large datasets efficiently. The architecture included multiple microservices, each handling specific aspects of data integration.
-          </p>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-img">
-          <i class="fas fa-project-diagram"></i>
-        </div>
-        <div class="project-content">
-          <h3 class="project-title">Ontology Visualization System</h3>
-          <div class="project-tags">
-            <span class="project-tag">Neo4j</span>
-            <span class="project-tag">Python</span>
-            <span class="project-tag">Cypher</span>
-            <span class="project-tag">SPARQL</span>
-          </div>
-          <p class="project-description">
-            Developed a system that converts complex OWL ontologies to Neo4j graph databases, translates SPARQL queries to Cypher, and provides a visualization interface for exploring ontologies. This improved query performance by 90% while making ontologies more accessible.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="education">
-  <div class="container">
-    <div class="section-header">
-      <h2>Education & Learning</h2>
-      <p class="section-description">
-        My educational background and learning journey
-      </p>
-    </div>
-
-    <div class="education-container">
-      <div class="education-card">
-        <div class="experience-header">
-          <div>
-            <h3 class="experience-title">Self-Taught Software Engineer</h3>
-            <div class="experience-company">Continuous Learning & Growth</div>
-          </div>
-        </div>
-        <p style="margin-bottom: 1rem;">
-          I'm a self-taught software engineer with a background in chemistry and electronics from high school. My journey began by picking up a Python book in my teen years, which sparked my passion for programming.
-        </p>
-        <p style="margin-bottom: 1rem;">
-          I explored the Linux world, from Ubuntu to Gentoo, learning C and writing shell scripts along the way. This hands-on experience with systems and low-level programming provided a solid foundation for my engineering career.
-        </p>
-        <p>
-          Through determination and continuous learning, I landed my first professional role and have been progressing my skills ever since. I believe in learning by doing and continually expanding my technical knowledge to tackle complex challenges.
+  <section id="skills" class="skills-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Skills & Expertise</h2>
+        <p class="section-description">
+          The tools and technologies I work with
         </p>
       </div>
-    </div>
-  </div>
-</section>
 
-<section id="languages" style="background-color: #f8fafc;">
-  <div class="container">
-    <div class="section-header">
-      <h2>Languages</h2>
-      <p class="section-description">
-        Communication skills across multiple languages
-      </p>
-    </div>
-
-    <div class="language-container">
-      <div class="language-card">
-        <h3 class="language-name">Arabic</h3>
-        <p class="language-level">Native</p>
-      </div>
-
-      <div class="language-card">
-        <h3 class="language-name">English</h3>
-        <p class="language-level">Full Professional Proficiency</p>
-      </div>
-
-      <div class="language-card">
-        <h3 class="language-name">Hebrew</h3>
-        <p class="language-level">Full Professional Proficiency</p>
-      </div>
-
-      <div class="language-card">
-        <h3 class="language-name">German</h3>
-        <p class="language-level">Limited Professional Proficiency</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="container">
-    <div class="section-header">
-      <h2>Get In Touch</h2>
-      <p class="section-description">
-        I'm always open to discussing new projects, opportunities, or collaborations
-      </p>
-    </div>
-
-    <div class="contact-container">
-      <div class="contact-info">
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fas fa-envelope"></i>
-          </div>
-          <div class="contact-text">
-            <a href="mailto:yankhoury9@gmail.com">yankhoury9@gmail.com</a>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fas fa-phone"></i>
-          </div>
-          <div class="contact-text">
-            +49 15206854786
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fab fa-linkedin"></i>
-          </div>
-          <div class="contact-text">
-            <a href="https://www.linkedin.com/in/jan-khoury-4b9ad/" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fab fa-github"></i>
-          </div>
-          <div class="contact-text">
-            <a href="https://github.com/yankh764" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fas fa-map-marker-alt"></i>
-          </div>
-          <div class="contact-text">
-            Berlin, Germany
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fas fa-passport"></i>
-          </div>
-          <div class="contact-text">
-            EU Citizen
-          </div>
-        </div>
-      </div>
-
-      <div class="contact-availability">
-        <div class="code-box" style="margin-top: 0;">
-          <div class="code-header">
-            <div class="code-dots">
-              <div class="code-dot red"></div>
-              <div class="code-dot yellow"></div>
-              <div class="code-dot green"></div>
+      <div class="skills-container">
+        <div class="skills-group">
+          <h3>Programming Languages</h3>
+          <div class="skills-list">
+            <div class="skill-tag">
+              <i class="devicon-python-plain" aria-hidden="true"></i> Python
             </div>
-            <div class="code-title">terminal</div>
-          </div>
-          <div class="code-line">
-            <div class="code-prompt">$</div>
-            <div class="code-command">./check_availability.sh</div>
-          </div>
-          <div class="code-line">
-            <div class="code-output">Checking Jan's availability status...</div>
-          </div>
-          <div class="code-line">
-            <div class="code-output">Current status: <span class="code-highlight">Available for new opportunities</span></div>
-          </div>
-          <div class="code-line">
-            <div class="code-output">Response time: Usually within 24 hours</div>
-          </div>
-          <div class="code-line">
-            <div class="code-output">Preferred contact method: <span class="code-highlight">Email</span> or <span class="code-highlight">LinkedIn</span></div>
-          </div>
-          <div class="code-line">
-            <div class="code-prompt">$</div>
-            <div class="code-command">echo "Looking forward to connecting with you!"</div>
-          </div>
-          <div class="code-line">
-            <div class="code-output">Looking forward to connecting with you!</div>
+            <div class="skill-tag">
+              <i class="devicon-typescript-plain" aria-hidden="true"></i> TypeScript
+            </div>
+            <div class="skill-tag">
+              <i class="devicon-java-plain" aria-hidden="true"></i> Java
+            </div>
           </div>
         </div>
-        <div style="text-align: center; margin-top: 2rem;">
-          <a href="mailto:yankhoury9@gmail.com" class="btn btn-primary">
-            <i class="fas fa-envelope"></i> Send Email
-          </a>
-          <a href="https://www.linkedin.com/in/jan-khoury-4b9ad/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-left: 1rem;">
-            <i class="fab fa-linkedin"></i> Connect on LinkedIn
-          </a>
+
+        <div class="skills-group">
+          <h3>Frameworks & Libraries</h3>
+          <div class="skills-list">
+            <div class="skill-tag">
+              <i class="devicon-fastapi-plain" aria-hidden="true"></i> FastAPI
+            </div>
+            <div class="skill-tag">
+              <i class="devicon-express-original" aria-hidden="true"></i> Express.js
+            </div>
+            <div class="skill-tag">
+              <i class="devicon-react-plain" aria-hidden="true"></i> React
+            </div>
+            <div class="skill-tag">
+              <i class="devicon-nextjs-plain" aria-hidden="true"></i> Next.js
+            </div>
+            <div class="skill-tag">
+              <i class="devicon-pandas-plain" aria-hidden="true"></i> Pandas
+            </div>
+            <div class="skill-tag">
+              <i class="fas fa-check-circle" aria-hidden="true"></i> Pydantic
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-group">
+          <h3>Cloud & Infrastructure</h3>
+          <div class="skills-list">
+            <div class="skill-tag">
+              <i class="fas fa-cloud" aria-hidden="true"></i> Google Cloud Platform
+            </div>
+            <div class="skill-tag">
+              <i class="fas fa-database" aria-hidden="true"></i> BigQuery
+            </div>
+            <div class="skill-tag">
+              <i class="fas fa-database" aria-hidden="true"></i> Cloud SQL
+            </div>
+            <div class="skill-tag">
+              <i class="fas fa-hdd" aria-hidden="true"></i> Cloud Storage
+            </div>
+            <div class="skill-tag">
+              <i class="fas fa-server" aria-hidden="true"></i> Cloud Run
+            </div>
+            <div class="skill-tag">
+              <i class="fas fa-tools" aria-hidden="true"></i> Cloud Build
+            </div>
+            <div class="skill-tag">
+              <i class="devicon-terraform-plain" aria-hidden="true"></i> Terraform
+            </div>
+            <div class="skill-tag">
+              <i class="fab fa-docker" aria-hidden="true"></i> Docker
+            </div>
+            <div class="skill-tag">
+              <i class="devicon-gitlab-plain" aria-hidden="true"></i> GitLab CI/CD
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-group">
+          <h3>Databases & Query Languages</h3>
+          <div class="skills-list">
+            <div class="skill-tag">
+              <i class="devicon-postgresql-plain" aria-hidden="true"></i> PostgreSQL
+            </div>
+            <div class="skill-tag">
+              <i class="fas fa-project-diagram" aria-hidden="true"></i> Neo4j
+            </div>
+            <div class="skill-tag">
+              <i class="devicon-firebase-plain" aria-hidden="true"></i> Firebase
+            </div>
+            <div class="skill-tag">
+              <i class="fas fa-code" aria-hidden="true"></i> SQL
+            </div>
+            <div class="skill-tag">
+              <i class="fas fa-code" aria-hidden="true"></i> Cypher
+            </div>
+            <div class="skill-tag">
+              <i class="fas fa-code" aria-hidden="true"></i> SPARQL
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-progress-container">
+        <div class="skill-progress">
+          <div class="skill-header">
+            <div class="skill-name">Backend Development</div>
+            <div class="skill-percent">95%</div>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <div class="skill-progress">
+          <div class="skill-header">
+            <div class="skill-name">Cloud Infrastructure</div>
+            <div class="skill-percent">90%</div>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <div class="skill-progress">
+          <div class="skill-header">
+            <div class="skill-name">Database Design & Optimization</div>
+            <div class="skill-percent">85%</div>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <div class="skill-progress">
+          <div class="skill-header">
+            <div class="skill-name">API Development</div>
+            <div class="skill-percent">95%</div>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <div class="skill-progress">
+          <div class="skill-header">
+            <div class="skill-name">CI/CD & DevOps</div>
+            <div class="skill-percent">85%</div>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Projects</h2>
+        <p class="section-description">
+          A showcase of my technical projects and solutions
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-img">
+            <i class="fas fa-car" aria-hidden="true"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Teen Driver Monitor</h3>
+            <div class="project-tags">
+              <span class="project-tag">Arduino</span>
+              <span class="project-tag">GPS</span>
+              <span class="project-tag">IoT</span>
+              <span class="project-tag">Hardware</span>
+            </div>
+            <p class="project-description">
+              Built a driver monitoring system using Arduino Nano, which detects driving speed with a NEO-6M GPS module, measures alcohol levels with an MQ-3 gas sensor, reports results to guardians via SMS using a GSM SIM900A module, and displays them in real time on an LCD screen.
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-img">
+            <i class="fas fa-water" aria-hidden="true"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Oceanographic Data Integration Platform</h3>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">FastAPI</span>
+              <span class="project-tag">GCP</span>
+              <span class="project-tag">Microservices</span>
+            </div>
+            <p class="project-description">
+              Took part in engineering a platform that integrates, processes, and delivers oceanographic data from multiple sources, enabling researchers to access and analyze large datasets efficiently. The architecture included multiple microservices, each handling specific aspects of data integration.
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-img">
+            <i class="fas fa-project-diagram" aria-hidden="true"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Ontology Visualization System</h3>
+            <div class="project-tags">
+              <span class="project-tag">Neo4j</span>
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Cypher</span>
+              <span class="project-tag">SPARQL</span>
+            </div>
+            <p class="project-description">
+              Developed a system that converts complex OWL ontologies to Neo4j graph databases, translates SPARQL queries to Cypher, and provides a visualization interface for exploring ontologies. This improved query performance by 90% while making ontologies more accessible.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="education-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Education & Learning</h2>
+        <p class="section-description">
+          My educational background and learning journey
+        </p>
+      </div>
+
+      <div class="education-container">
+        <article class="education-card">
+          <div class="experience-header">
+            <div>
+              <h3 class="experience-title">Self-Taught Software Engineer</h3>
+              <div class="experience-company">Continuous Learning & Growth</div>
+            </div>
+          </div>
+          <p class="education-paragraph">
+            I'm a self-taught software engineer with a background in chemistry and electronics from high school. My journey began by picking up a Python book in my teen years, which sparked my passion for programming.
+          </p>
+          <p class="education-paragraph">
+            I explored the Linux world, from Ubuntu to Gentoo, learning C and writing shell scripts along the way. This hands-on experience with systems and low-level programming provided a solid foundation for my engineering career.
+          </p>
+          <p class="education-paragraph">
+            Through determination and continuous learning, I landed my first professional role and have been progressing my skills ever since. I believe in learning by doing and continually expanding my technical knowledge to tackle complex challenges.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="languages" class="languages-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Languages</h2>
+        <p class="section-description">
+          Communication skills across multiple languages
+        </p>
+      </div>
+
+      <div class="language-container">
+        <div class="language-card">
+          <h3 class="language-name">Arabic</h3>
+          <p class="language-level">Native</p>
+        </div>
+
+        <div class="language-card">
+          <h3 class="language-name">English</h3>
+          <p class="language-level">Full Professional Proficiency</p>
+        </div>
+
+        <div class="language-card">
+          <h3 class="language-name">Hebrew</h3>
+          <p class="language-level">Full Professional Proficiency</p>
+        </div>
+
+        <div class="language-card">
+          <h3 class="language-name">German</h3>
+          <p class="language-level">Limited Professional Proficiency</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Get In Touch</h2>
+        <p class="section-description">
+          I'm always open to discussing new projects, opportunities, or collaborations
+        </p>
+      </div>
+
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+            </div>
+            <div class="contact-text">
+              <a href="mailto:yankhoury9@gmail.com" aria-label="Email me">yankhoury9@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone" aria-hidden="true"></i>
+            </div>
+            <div class="contact-text">
+              <a href="tel:+4915206854786" aria-label="Call me">+49 15206854786</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fab fa-linkedin" aria-hidden="true"></i>
+            </div>
+            <div class="contact-text">
+              <a href="https://www.linkedin.com/in/jan-khoury-4b9ad/" target="_blank" rel="noopener noreferrer" aria-label="Visit my LinkedIn profile">LinkedIn Profile</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fab fa-github" aria-hidden="true"></i>
+            </div>
+            <div class="contact-text">
+              <a href="https://github.com/yankh764" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub profile">GitHub Profile</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+            </div>
+            <div class="contact-text">
+              Berlin, Germany
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-passport" aria-hidden="true"></i>
+            </div>
+            <div class="contact-text">
+              EU Citizen
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-availability">
+          <div class="code-box" aria-label="Availability information">
+            <div class="code-header">
+              <div class="code-dots">
+                <div class="code-dot red"></div>
+                <div class="code-dot yellow"></div>
+                <div class="code-dot green"></div>
+              </div>
+              <div class="code-title">terminal</div>
+            </div>
+            <div class="code-line">
+              <div class="code-prompt">$</div>
+              <div class="code-command">./check_availability.sh</div>
+            </div>
+            <div class="code-line">
+              <div class="code-output">Checking Jan's availability status...</div>
+            </div>
+            <div class="code-line">
+              <div class="code-output">Current status: <span class="code-highlight">Available for new opportunities</span></div>
+            </div>
+            <div class="code-line">
+              <div class="code-output">Response time: Usually within 24 hours</div>
+            </div>
+            <div class="code-line">
+              <div class="code-output">Preferred contact method: <span class="code-highlight">Email</span> or <span class="code-highlight">LinkedIn</span></div>
+            </div>
+            <div class="code-line">
+              <div class="code-prompt">$</div>
+              <div class="code-command">echo "Looking forward to connecting with you!"</div>
+            </div>
+            <div class="code-line">
+              <div class="code-output">Looking forward to connecting with you!</div>
+            </div>
+          </div>
+          <div class="contact-buttons">
+            <a href="mailto:yankhoury9@gmail.com" class="btn btn-primary">
+              <i class="fas fa-envelope" aria-hidden="true"></i> Send Email
+            </a>
+            <a href="https://www.linkedin.com/in/jan-khoury-4b9ad/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+              <i class="fab fa-linkedin" aria-hidden="true"></i> Connect on LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
 <footer class="footer">
   <div class="container footer-container">
-    <div class="footer-logo">Jan<span>Khoury</span></div>
+    <div class="footer-logo" aria-label="Site logo">Jan<span>Khoury</span></div>
     <div class="social-links">
-      <a href="https://github.com/yankh764" target="_blank" rel="noopener noreferrer" class="social-icon">
-        <i class="fab fa-github"></i>
+      <a href="https://github.com/yankh764" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub Profile">
+        <i class="fab fa-github" aria-hidden="true"></i>
       </a>
-      <a href="https://www.linkedin.com/in/jan-khoury-4b9ad/" target="_blank" rel="noopener noreferrer" class="social-icon">
-        <i class="fab fa-linkedin-in"></i>
+      <a href="https://www.linkedin.com/in/jan-khoury-4b9ad/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn Profile">
+        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
       </a>
-      <a href="mailto:yankhoury9@gmail.com" class="social-icon">
-        <i class="fas fa-envelope"></i>
+      <a href="mailto:yankhoury9@gmail.com" class="social-icon" aria-label="Email me">
+        <i class="fas fa-envelope" aria-hidden="true"></i>
       </a>
     </div>
     <div class="copyright">
@@ -576,11 +588,37 @@
   </div>
 </footer>
 
-<div class="scroll-top" id="scrollTop">
-  <i class="fas fa-arrow-up"></i>
-</div>
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+  <i class="fas fa-arrow-up" aria-hidden="true"></i>
+</button>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jan Khoury",
+    "jobTitle": "Backend Software Engineer",
+    "url": "https://yankh764.github.io/",
+    "image": "https://yankh764.github.io/images/profile.jpg",
+    "email": "yankhoury9@gmail.com",
+    "telephone": "+4915206854786",
+    "sameAs": [
+      "https://www.linkedin.com/in/jan-khoury-4b9ad/",
+      "https://github.com/yankh764"
+    ],
+    "knowsLanguage": ["Arabic", "English", "Hebrew", "German"],
+    "knowsAbout": ["Python", "FastAPI", "Cloud Computing", "Microservices", "API Development"],
+    "workLocation": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Berlin",
+        "addressCountry": "Germany"
+      }
+    }
+  }
+</script>
 
 <script src="js/main.js"></script>
-
 </body>
 </html>
