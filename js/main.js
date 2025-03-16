@@ -111,20 +111,23 @@ function setupSmoothScrolling() {
 
 function setupIntersectionObserver() {
     const observerOptions = {
-        threshold: 0.1
+        threshold: 0.05,
+        rootMargin: '0px 0px -50px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 if (!entry.target.classList.contains('has-animated')) {
-                    entry.target.classList.add('fade-in');
-                    entry.target.classList.add('has-animated');
+                    setTimeout(() => {
+                        entry.target.classList.add('fade-in');
+                        entry.target.classList.add('has-animated');
 
-                    if (entry.target.id === 'skills' && !entry.target.dataset.animated) {
-                        animateSkillBars();
-                        entry.target.dataset.animated = "true";
-                    }
+                        if (entry.target.id === 'skills' && !entry.target.dataset.animated) {
+                            animateSkillBars();
+                            entry.target.dataset.animated = "true";
+                        }
+                    }, 50);
                 }
             }
         });
