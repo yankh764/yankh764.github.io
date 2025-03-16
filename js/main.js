@@ -6,13 +6,55 @@ function setupMobileMenu() {
         menuButton.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             menuButton.classList.toggle('active');
+
+            // Toggle hamburger to X animation
+            const spans = menuButton.querySelectorAll('span');
+            if (spans.length >= 3) {
+                spans[0].style.transform = menuButton.classList.contains('active')
+                    ? 'rotate(45deg) translate(5px, 5px)'
+                    : '';
+                spans[1].style.opacity = menuButton.classList.contains('active')
+                    ? '0'
+                    : '1';
+                spans[2].style.transform = menuButton.classList.contains('active')
+                    ? 'rotate(-45deg) translate(7px, -6px)'
+                    : '';
+            }
         });
 
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
                 menuButton.classList.remove('active');
+
+                // Reset hamburger icon state
+                const spans = menuButton.querySelectorAll('span');
+                if (spans.length >= 3) {
+                    spans[0].style.transform = '';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = '';
+                }
             });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (window.innerWidth <= 768 &&
+                !navLinks.contains(event.target) &&
+                !menuButton.contains(event.target) &&
+                navLinks.classList.contains('active')) {
+
+                navLinks.classList.remove('active');
+                menuButton.classList.remove('active');
+
+                // Reset hamburger icon state
+                const spans = menuButton.querySelectorAll('span');
+                if (spans.length >= 3) {
+                    spans[0].style.transform = '';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = '';
+                }
+            }
         });
     }
 }
@@ -131,10 +173,4 @@ document.addEventListener('DOMContentLoaded', async () => {
     setupIntersectionObserver();
     setupTypewriterEffect();
     setupMobileMenu();
-
-    setTimeout(() => {
-        if (isElementInViewport(document.getElementById('skills'))) {
-            animateSkillBars();
-        }
-    }, 500);
 });
