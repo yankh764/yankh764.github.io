@@ -759,9 +759,9 @@ button {
 }
 
 .theme-toggle {
-    min-height: 40px;
-    width: 40px;
-    height: 40px;
+    min-height: 35px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -949,6 +949,12 @@ button {
 
     h2 {
         font-size: 2rem;
+    }
+
+    .theme-toggle {
+        min-height: 30px;
+        width: 30px;
+        height: 30px;
     }
 
     .subtitle {
