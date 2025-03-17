@@ -22,7 +22,6 @@ If you'd like to get in touch with me:
 
 - Email: [yankhoury9@gmail.com](mailto:yankhoury9@gmail.com)
 - LinkedIn: [Jan Khoury](https://www.linkedin.com/in/jan-khoury-4b9ad/)
-- GitHub: [@yankh764](https://github.com/yankh764)
 
 ## 📄 License
 This project is open source and available under the [MIT License](LICENSE).
