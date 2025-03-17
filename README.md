@@ -1,11 +1,11 @@
-# Jan Khoury - Portfolio Website
+# Portfolio Website
 [![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fyankh764.github.io&style=flat-square)](https://yankh764.github.io)
 [![GitHub last commit](https://img.shields.io/github/last-commit/yankh764/yankh764.github.io?style=flat-square)](https://github.com/yankh764/yankh764.github.io/commits/main)
 
 This repository contains the source code for my professional portfolio website. The site showcases my skills, experience, and projects in the field of software engineering with a focus on data-intensive backend systems and cloud infrastructure.
 
 ## 🌐 Website
-Visit my portfolio at: [yankh764.github.io](https://yankh764.github.io)
+Visit my portfolio at: [jankhoury.dev](https://jankhoury.dev)
 
 ## 🛠️ Built With
 - HTML5
