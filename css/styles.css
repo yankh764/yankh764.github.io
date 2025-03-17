@@ -350,7 +350,11 @@ h2::after {
     background-color: var(--primary);
     border-radius: 3px;
     transition: transform 0.3s, opacity 0.3s;
-    margin: 0;
+    margin-bottom: 4px;
+}
+
+.mobile-menu-button span:last-child {
+    margin-bottom: 0;
 }
 
 .container {
