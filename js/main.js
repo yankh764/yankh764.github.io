@@ -156,6 +156,40 @@ function updateCopyrightYear() {
     }
 }
 
+function setupThemeToggle() {
+    const themeToggle = document.getElementById('themeToggle');
+    const darkIcon = document.getElementById('darkIcon');
+    const lightIcon = document.getElementById('lightIcon');
+
+    if (!themeToggle || !darkIcon || !lightIcon) return;
+
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        darkIcon.style.display = 'none';
+        lightIcon.style.display = 'block';
+    }
+
+    themeToggle.addEventListener('click', function() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        let newTheme = 'light';
+
+        if (currentTheme !== 'dark') {
+            newTheme = 'dark';
+            darkIcon.style.display = 'none';
+            lightIcon.style.display = 'block';
+        } else {
+            darkIcon.style.display = 'block';
+            lightIcon.style.display = 'none';
+        }
+
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+    });
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
     updateCopyrightYear();
     setupScrollToTop();
@@ -163,4 +197,5 @@ document.addEventListener('DOMContentLoaded', async () => {
     setupIntersectionObserver();
     setupTypewriterEffect();
     setupMobileMenu();
+    setupThemeToggle();
 });
