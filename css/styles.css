@@ -336,23 +336,24 @@ h2::after {
     display: none;
     flex-direction: column;
     justify-content: space-between;
+    width: 30px;
     height: 24px;
     cursor: pointer;
     background: none;
     border: none;
-    padding: 0.5rem;
-    min-height: 30px;
+    padding: 0;
+    margin: 0;
+    position: relative;
 }
 
 .mobile-menu-button span {
-    display: block;
+    position: absolute;
+    left: 0;
     width: 30px;
     height: 3px;
     background-color: var(--primary);
     border-radius: 3px;
     transition: transform 0.3s, opacity 0.3s;
-    margin: 0;
-    position: relative;
 }
 
 .mobile-menu-button span:nth-child(1) {
@@ -360,11 +361,11 @@ h2::after {
 }
 
 .mobile-menu-button span:nth-child(2) {
-    top: 0;
+    top: 10px;
 }
 
 .mobile-menu-button span:nth-child(3) {
-    bottom: 0;
+    top: 20px;
 }
 
 .container {
@@ -986,6 +987,13 @@ button {
         font-size: 2rem;
     }
 
+    nav {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     .subtitle {
         font-size: 1.1rem;
     }
@@ -996,9 +1004,6 @@ button {
 
     .mobile-menu-button {
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 30px;
     }
 
     .nav-links {
