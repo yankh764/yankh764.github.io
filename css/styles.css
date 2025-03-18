@@ -759,7 +759,6 @@ button {
 }
 
 .theme-toggle {
-    min-height: 35px;
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -952,7 +951,6 @@ button {
     }
 
     .theme-toggle {
-        min-height: 25px;
         width: 25px;
         height: 25px;
     }
@@ -1061,7 +1059,6 @@ button {
     }
 
     .theme-toggle {
-        min-height: 20px;
         width: 20px;
         height: 20px;
     }
