@@ -400,25 +400,6 @@ header nav {
     color: var(--secondary);
 }
 
-.hamburger {
-    display: none;
-    cursor: pointer;
-    z-index: 1001;
-    background: transparent;
-    border: none;
-    min-height: 44px;
-    min-width: 44px;
-}
-
-.hamburger span {
-    display: block;
-    width: 24px;
-    height: 3px;
-    background-color: var(--primary);
-    margin: 4px 0;
-    transition: var(--transition-standard);
-}
-
 .hero {
     padding-top: 9rem;
     padding-bottom: 5rem;
@@ -709,6 +690,9 @@ header nav {
 .contact-buttons {
     text-align: center;
     margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .theme-toggle {
@@ -969,25 +953,6 @@ header nav {
         font-size: var(--font-base);
     }
 
-    .hamburger {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .hamburger.active span:nth-child(1) {
-        transform: translateY(7px) rotate(45deg);
-    }
-
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(3) {
-        transform: translateY(-7px) rotate(-45deg);
-    }
-
     .nav-links {
         position: fixed;
         top: 70px;
@@ -1231,10 +1196,6 @@ header nav {
 }
 
 @media (min-width: 769px) {
-    .hamburger {
-        display: none;
-    }
-
     .nav-links {
         opacity: 1 !important;
         visibility: visible !important;
