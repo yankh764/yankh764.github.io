@@ -43,7 +43,7 @@ function setupSmoothScrolling() {
 
             if (targetElement) {
                 window.scrollTo({
-                    top: targetElement.offsetTop - 80, // Offset for the fixed header
+                    top: targetElement.offsetTop - 80,
                     behavior: 'smooth'
                 });
             }
@@ -77,6 +77,20 @@ function setupIntersectionObserver() {
 
     document.querySelectorAll('section').forEach(section => {
         observer.observe(section);
+    });
+}
+
+function setupBlurOnClick() {
+    const interactiveElements = document.querySelectorAll(
+        'a, button, .btn, .social-icon, .theme-toggle, .skill-tag'
+    );
+
+    interactiveElements.forEach(element => {
+        element.addEventListener('click', function() {
+            setTimeout(() => {
+                this.blur();
+            }, 100);
+        });
     });
 }
 
@@ -139,4 +153,5 @@ document.addEventListener('DOMContentLoaded', async () => {
     setupIntersectionObserver();
     setupTypewriterEffect();
     setupThemeToggle();
+    setupBlurOnClick();
 });
