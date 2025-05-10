@@ -254,7 +254,7 @@ img {
 }
 
 .skill-tag:hover {
-    background-color: var(--accent);
+    background-color: var(--secondary);
     color: white;
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(66, 153, 225, 0.2);
